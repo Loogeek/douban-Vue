@@ -1,0 +1,23 @@
+<template lang="jade">
+  li(v-for="titleItem of title")
+    button(@click="handleTitleChange(titleItem)",
+    	     :class="titleItem === selected ? 'btn btn-primary' : 'btn btn-default'")
+      {{ titleItem }}
+</template>
+
+<script>
+	export default {
+		name: 'TitleTop',
+		props: {
+			title: Array,
+			selected: String
+		},
+		methods: {
+			handleTitleChange(titleName) {
+				if(titleName !== this.selected) {
+					this.selected = titleName;
+				}
+			}
+		}
+	}
+</script>
