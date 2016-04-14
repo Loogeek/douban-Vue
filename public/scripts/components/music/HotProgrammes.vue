@@ -2,21 +2,21 @@
   div.class-top
     span 近期热门歌单
     ul
-      title-top(:title="title",:selected.sync="selected")
-    a.more(href="/music/results?pro={{dataPro[index] ? dataPro[index]._id : ''}}&p=0" target="_blank") 更多
+      title(:title="title",:selected.sync="selected")
+    a.more(href="/music/results?pro={{ dataPro[index] ? dataPro[index]._id : '' }}&p=0" target="_blank") 更多
   div.screen
     div.panel-body.screen-body
       hot-programme-item(:data="currentData")  
 </template>
 
 <script>
-	import TitleTop from './TitleTop';						 			 // 标题组件
+	import Title from './Title';						 			 // 标题组件
 	import HotProgrammeItem from './HotProgrammeItem';   // 展示组件
 
 	export default {
 		name: 'HotProgrammes',
 		components: { 
-			TitleTop,
+			Title,
 			HotProgrammeItem 
 		},
 		data() {
@@ -59,3 +59,10 @@
 		}
 	};
 </script>
+
+<style lang="sass">
+/* 近期热门歌单样式 */
+#hotProgrammes{
+	margin-top: 20px;
+}	
+</style>

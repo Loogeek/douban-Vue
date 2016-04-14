@@ -12,3 +12,15 @@
 		}
 	}
 </script>
+
+<style lang="sass" scoped>
+p {
+  font-size: 12px;
+  color:#666;
+  line-height:18px;
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+}
+</style>

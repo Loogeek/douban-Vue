@@ -7,19 +7,19 @@
         span 播放全部
     div.billboard-bd.class-top
       ul.hot-artistTop
-        title-top(:title="title",:selected.sync="selected")
+        title(:title="title",:selected.sync="selected")
       div.hotArtist-songs
         artist-song-item(:data="currentData")    
 </template>
 
 <script>
-	import TitleTop from './TitleTop';						 // 标题组件
+	import Title from './Title';						 			 // 标题组件
 	import ArtistSongItem from './ArtistSongItem'; // 展示组件
 
 	export default {
 		name: 'HotArtistSongs',
 		components: { 
-			TitleTop,
+			Title,
 			ArtistSongItem 
 		},
 		data() {
@@ -56,3 +56,26 @@
 		}
 	};
 </script>
+
+<style lang="sass">
+/* 本周单曲榜样式  */
+.play-button {
+	float: right;
+	color: #fff;
+	background-color: #139D72;
+	border:1px solid #138A64;
+	font-size: 12px;
+	border-radius: 3px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	cursor: pointer;
+	padding: 0 5px;
+	&:hover {
+		text-decoration: none;
+		background-color: #13ba72;
+		color:#fff;
+	}
+	span {padding-left: 5px;}
+}
+</style>

@@ -131,26 +131,25 @@ block content
                   .cities-list-bd
                     // 热门城市列表
                     - for(var j = 0; j < cityProgrammeList.length; j++)
-                      if cityProgrammeList[j]
-                        if cityProgrammeList[j].name === '热门'
-                          .cities-list-item.active
-                            ul
-                              - for(var h = 0; h < cityCategoryList.length; h++)
-                                if cityCategoryList[h].name === '热门'
-                                  - for(var k = 0; k < cityCategoryList[h].cities.length; k++)
-                                    li: a.city-item(href="javascript:;") #{cityCategoryList[h].cities[k].name}
-                        else
-                          .cities-list-item
-                            - for(var y = 0; y < cityCategoryList.length; y++)
-                              if cityCategoryList[y].cityProgramme
-                                if cityProgrammeList[j].name === cityCategoryList[y].cityProgramme.name
-                                  dl.city-mod
-                                    dt #{cityCategoryList[y].name}
-                                    dd
-                                      ul
-                                        - for(var z = 0; z < cityCategoryList[y].cities.length; z++)
-                                          li: a.city-item(href="javascript:;") #{cityCategoryList[y].cities[z].name}
-                                    hr
+                      if cityProgrammeList[j].name === '热门'
+                        .cities-list-item.active
+                          ul
+                            - for(var h = 0; h < cityCategoryList.length; h++)
+                              if cityCategoryList[h].name === '热门'
+                                - for(var k = 0; k < cityCategoryList[h].cities.length; k++)
+                                  li: a.city-item(href="javascript:;") #{cityCategoryList[h].cities[k].name}
+                      else
+                        .cities-list-item
+                          - for(var y = 0; y < cityCategoryList.length; y++)
+                            if cityCategoryList[y].cityProgramme
+                              if cityProgrammeList[j].name === cityCategoryList[y].cityProgramme.name
+                                dl.city-mod
+                                  dt #{cityCategoryList[y].name}
+                                  dd
+                                    ul
+                                      - for(var z = 0; z < cityCategoryList[y].cities.length; z++)
+                                        li: a.city-item(href="javascript:;") #{cityCategoryList[y].cities[z].name}
+                                  hr
               // 电影院搜索节点标签
               #citySug.city-suggestion
                 .city-suggestion-input
@@ -192,4 +191,5 @@ block content
               a(href="javascript:;")
                 img(src="/libs/images/movie/advertisements/2.jpg")
   // 电影首页JS脚本
+  script(src="/libs/scripts/components/componentInit.min.js")
   script(src="/libs/scripts/components/movieBundle.min.js")

@@ -6,7 +6,7 @@
       span 选电视剧
       hr
       ul
-        title-top(:title="title",:selected.sync="selected")
+        choose-movies-title(:title="title",:selected.sync="selected")
       hr
       div.screen-body
         div.panel.panel-default
@@ -16,13 +16,13 @@
 </template>
 
 <script>
-	import TitleTop from './TitleTop';						 			 // 标题组件
+	import ChooseMoviesTitle from './ChooseMoviesTitle'; // 标题组件
 	import ChooseMovieItem from './ChooseMovieItem';		 // 展示组件
 
 	export default {
 		name: 'ChooseMovies',
 		components: { 
-			TitleTop,
+			ChooseMoviesTitle,
 			ChooseMovieItem
 		},
 		data() {
@@ -59,3 +59,36 @@
 		}
 	};
 </script>
+
+<style lang="sass">
+/* 选电影区样式 */
+.fliter-movies{
+	.class-top{
+		ul{
+			list-style: none;
+			padding: 0;
+		}
+	}
+	.more{
+		display: block;
+		width: 100%;
+		height: 34px;
+		line-height: 34px;
+		text-align: center;
+		font-size: 14px;
+		background-color: #f7f7f7;
+	}
+	.more:hover{
+		text-decoration: none;
+		background-color: #eee;
+	}
+	.more:link{
+		text-decoration: none;
+		color: #37a;
+	}
+	.more:active{
+		text-decoration: none;
+		color: #666699;
+	}
+}
+</style>

@@ -206,9 +206,6 @@ h5{
 /* 顶部右侧广告列表样式 */
 .right-advertisement{
 	text-align: center;
-	// a{
-	// 	width: 100%
-	// }
 	img{
 		margin-top: -10px;
 	}
@@ -295,31 +292,6 @@ h5{
 }
 
 
-/* 新碟榜样式 */
-.new-albums {
-	.caption {
-		h5 {
-			a {
-				color: #138A64;
-			}
-			a:hover {
-				background-color: #138A64;
-				color: #fff;
-				text-decoration: none;
-			}
-		}
-		p{
-			font-size: 12px;
-			color: #999;
-		}
-		div{
-			font-size: 12px;
-			height: 100px;
-			overflow: hidden;
-		}
-	}
-}
-
 /* 热门音乐人分类样式 */
 .tag-block{
 	margin-top: 10px;
@@ -332,70 +304,6 @@ h5{
 		}
 		&:nth-child(odd){
 			border-right:1px solid #ddd;
-		}
-	}
-}
-
-
-/* 本周单曲榜样式  */
-.play-button{
-	float:right;
-	color:#fff;
-	background-color: #139D72;
-	border:1px solid #138A64;
-	font-size: 12px;
-	@include border-radius;
-	height: 25px;
-	line-height: 25px;
-	text-align: center;
-	cursor: pointer;
-	padding:0 5px;
-	&:hover{
-		text-decoration: none;
-		background-color: #13ba72;
-		color:#fff;
-	}
-	span{padding-left: 5px;}
-}
-.hotArtist-songs{
-	ul{
-		list-style: none;
-		padding:0;
-		li{
-			position: relative;
-			padding-left: 60px;
-			height:60px;
-			line-height: 60px;
-			img{
-				width:48px;
-				height:48px;
-				@include border-radius(50%);
-				overflow: hidden;
-				position: absolute;
-				top:6px;
-				left: 2px;
-			}
-			h5{
-				padding:12px 40px 8px 0;
-				margin:0;
-			}
-			p{
-				font-size: 12px;
-				color:#999;
-				line-height: 12px;
-			}
-			span{
-				position: absolute;
-				right: 10px;
-				top:0;
-				font-size: 34px;
-				color:#E6E6E6;
-			}
-			&:hover{
-				background-color:#eee;
-				cursor:pointer;
-			}
-			a:hover{text-decoration: none;}
 		}
 	}
 }
@@ -444,51 +352,6 @@ h5{
 		h5:hover{
 			background-color: #138A64;
 			color: #fff;
-		}
-	}
-}
-
-
-/* 近期热门歌单样式 */
-#hotProgrammes{
-	margin-top: 20px;
-	.thumbnail{
-		position: relative;
-		width:50%;
-		height:auto;
-		padding:0 10px 0 0;
-	}
-	.inner{
-		background-color:#fff;
-		border:1px solid #eee;
-		padding:16px 13px 16px 63px;
-		font-size: 12px;
-		color:#666;
-		line-height:18px;
-		h5{
-			margin-top:0;
-			a {
-				color: #138A64;
-			}
-			a:hover {
-				background-color: #138A64;
-				color: #fff;
-				text-decoration: none;
-			}
-		}
-		img{
-			width:40px;
-			height:40px;
-			position:absolute;
-			top:16px;
-			left:14px;
-		}
-		p{
-			font-size: 12px;
-			color:#666;
-			line-height:18px;
-			margin: 0;
-			@include ellipsis;
 		}
 	}
 }

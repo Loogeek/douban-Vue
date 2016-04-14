@@ -17,3 +17,30 @@
 		}
 	}
 </script>
+
+<style lang="sass">
+/* 新碟榜样式 */
+.new-albums {
+  .caption {
+    h5 {
+      a {
+        color: #138A64;
+      }
+      a:hover {
+        background-color: #138A64;
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+    p{
+      font-size: 12px;
+      color: #999;
+    }
+    div{
+      font-size: 12px;
+      height: 100px;
+      overflow: hidden;
+    }
+  }
+}
+</style>

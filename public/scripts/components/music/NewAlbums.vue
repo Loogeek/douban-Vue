@@ -2,7 +2,7 @@
   div.class-top.new-albums
     span 新碟榜
     ul
-      title-top(:title="title",:selected.sync="selected")
+      title(:title="title",:selected.sync="selected")
     a.more(href="/music/results?cat={{currentData._id}}&p=0" target="_blank") 更多
     div.screen
       div.panel-body.screen-body
@@ -10,13 +10,13 @@
 </template>
 
 <script>
-	import TitleTop from './TitleTop';						 // 标题组件
+	import Title from './Title';						 // 标题组件
 	import NewAlbumItem from './NewAlbumItem';		 // 展示组件
 
 	export default {
 		name: 'NewAlbums',
 		components: { 
-			TitleTop,
+			Title,
 			NewAlbumItem 
 		},
 		data() {

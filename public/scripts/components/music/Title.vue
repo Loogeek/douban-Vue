@@ -1,12 +1,11 @@
 <template lang="jade">
   li(v-for="titleItem of title",:class="{'on': titleItem === selected}")
-    a(href="javascript:;",@click="handleTitleChange(titleItem)")
-      {{titleItem}}
+    a(href="javascript:;",@click="handleTitleChange(titleItem)") {{ titleItem }}
 </template>
 
 <script>
 	export default {
-		name: 'TitleTop',
+		name: 'Title',
 		props: {
 			title: Array,
 			selected: String

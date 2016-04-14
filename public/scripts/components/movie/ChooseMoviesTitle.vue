@@ -2,12 +2,12 @@
   li(v-for="titleItem of title")
     button(@click="handleTitleChange(titleItem)",
     	     :class="titleItem === selected ? 'btn btn-primary' : 'btn btn-default'")
-      {{ titleItem }}
+      | {{ titleItem }}
 </template>
 
 <script>
 	export default {
-		name: 'TitleTop',
+		name: 'ChooseMoviesTitle',
 		props: {
 			title: Array,
 			selected: String
@@ -21,3 +21,11 @@
 		}
 	}
 </script>
+
+<style lang="sass">
+.class-top{
+	li{
+		display: inline;
+	}
+}
+</style>

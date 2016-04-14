@@ -23,3 +23,40 @@
     }
 	}
 </script>
+
+<style lang="sass" scoped>
+#hotProgrammes{
+  .thumbnail{
+    position: relative;
+    width:50%;
+    height:auto;
+    padding:0 10px 0 0;
+  }
+  .inner{
+    background-color:#fff;
+    border:1px solid #eee;
+    padding:16px 13px 16px 63px;
+    font-size: 12px;
+    color:#666;
+    line-height:18px;
+    h5{
+      margin-top:0;
+      a {
+        color: #138A64;
+      }
+      a:hover {
+        background-color: #138A64;
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+    img{
+      width:40px;
+      height:40px;
+      position:absolute;
+      top:16px;
+      left:14px;
+    }
+  }
+} 
+</style>

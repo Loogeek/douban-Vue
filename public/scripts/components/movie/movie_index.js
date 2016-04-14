@@ -4,13 +4,14 @@ $.support.cors = true;                                  // 解决IE8/9 Ajax跨�
 import Vue from 'vue';                                  // 引入Vue框架
 import ChooseMovies from './ChooseMovies';              // 引入选电影组件
 
-// 给选电影/电视剧区创建Vue实例
+// 创建选电影/电视剧区Vue实例
 new Vue({
   el: '#fliterMovies',
   components: { 
     ChooseMovies
   }
 });
+
 
 $(function() {
   // 电影主页函数
@@ -199,7 +200,7 @@ $(function() {
           galleryMov('right');
         },5000);
       });
-      //轮播滚动函数，对作用方向进行不同移动
+      // 轮播滚动函数，对作用方向进行不同移动
       var galleryMov = function(direction){
         if(!$oUl.is(':animated')){
           if(direction === 'right'){

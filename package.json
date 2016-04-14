@@ -43,6 +43,7 @@
     "mongodb": "^2.1.7",
     "mongoose": "^4.1.7",
     "morgan": "^1.6.1",
+    "sass-loader": "^3.2.0",
     "should": "^7.1.0",
     "underscore": "^1.8.3",
     "vue": "^1.0.21",
