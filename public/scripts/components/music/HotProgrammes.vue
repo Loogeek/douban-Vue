@@ -6,7 +6,7 @@
     a.more(href="/music/results?pro={{ dataPro[index] ? dataPro[index]._id : '' }}&p=0" target="_blank") 更多
   div.screen
     div.panel-body.screen-body
-      hot-programme-item(:data="currentData")  
+      hot-programme-item(:data="currentData")
 </template>
 
 <script>
@@ -15,9 +15,9 @@
 
 	export default {
 		name: 'HotProgrammes',
-		components: { 
+		components: {
 			Title,
-			HotProgrammeItem 
+			HotProgrammeItem
 		},
 		data() {
 			return {
@@ -40,12 +40,11 @@
 				// 在dataList中查找该value值是否存在，若存在则说明该数据已请求过，无需再次发送get请求
 				let dataPro = this.dataPro;
 				for(let i = 0; i < dataPro.length; i++) {
-		      let index = dataPro[i].name.indexOf(value);
-		      if(index !== -1) {
-		      	this.currentData = this.dataList[i];
-		      	this.index = i;
-		      	return;
-		      }
+          if(dataPro[i].name.includes(value)) {
+            this.currentData = this.dataList[i];
+            this.index = i;
+            return;
+          }
 		    }
 				// dataList中没有该标题数据 发送新请求到服务器
 				let url = '/musicindex?hotProName=' + encodeURIComponent('近期热门歌单' + value);
@@ -64,5 +63,5 @@
 /* 近期热门歌单样式 */
 #hotProgrammes{
 	margin-top: 20px;
-}	
+}
 </style>

@@ -12,7 +12,7 @@
         div.panel.panel-default
           #classBody.panel-body.screen-body
             choose-movie-item(:data="currentData")
-          a.more(href="javascript:;" role="button") 加载更多        
+          a.more(href="javascript:;" role="button") 加载更多
 </template>
 
 <script>
@@ -21,7 +21,7 @@
 
 	export default {
 		name: 'ChooseMovies',
-		components: { 
+		components: {
 			ChooseMoviesTitle,
 			ChooseMovieItem
 		},
@@ -42,12 +42,11 @@
 		methods: {
 			getData(value) {
 				// 在dataList中查找该value值是否存在，若存在则说明该数据已请求过，无需再次发送get请求
-				for(let item of this.dataList) {					
-					let index = item.name.indexOf(value);
-					if(index !== -1) {
-						this.currentData = item;
-						return;
-					}
+				for(let item of this.dataList) {
+          if(item.name.includes(value)) {
+            this.currentData = item;
+            return;
+          }				
 				}
 				// dataList中没有该标题数据 发送新请求到服务器
 				let url = '/?fliterName=' + encodeURIComponent(value + '电影');

@@ -1,6 +1,6 @@
 <template lang="jade">
   ul
-    li(v-for="item of data.musics")
+    li(v-for="item of data.musics" track-by="_id")
       a(href="/music/{{ item._id }}" target="_blank")
         img(:src="item.image")
         h5 {{ item.title }}
