@@ -10,7 +10,7 @@
 </template>
 
 <script>
-	import Title from './Title';						 // 标题组件
+	import Title from './Title';						 			 // 标题组件
 	import NewAlbumItem from './NewAlbumItem';		 // 展示组件
 
 	export default {
